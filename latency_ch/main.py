@@ -168,7 +168,7 @@ with open(os.path.join(sub_directory, 'Hyper_Param.txt'), 'w') as file:
         file.write(f"{key}: {value}\n")
 
 # Store score data (matlab data file)
-savemat(os.path.join(sub_directory, 'data.mat'),{'stable_lifting_time': stable_lifting_time, 'box_z_pos': box_z_pos, 'success_time': success_time, 'average_reward' : reward})
+savemat(os.path.join(sub_directory, 'data.mat'),{'stable_lifting_time': stable_lifting_time, 'box_z_pos': box_z_pos, 'success_time': success_time, 'average_reward': reward})
 # savemat(os.path.join(sub_directory, 'data.mat'),{'sim_res': cum_score_list,'sim_optimal': optimal_score_avg_value})
 # savemat(os.path.join(sub_directory, 'data.mat'), {'sim_res': cum_score_list,'sim_rand_res': cum_rand_score_list,
 #                                                   'sim_optimal_res': cum_optimal_score_list})
