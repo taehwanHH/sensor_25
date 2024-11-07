@@ -1,14 +1,14 @@
 clear all;  clc;
 % close all;
 % .mat 파일 로드
-file_date = '2024-10-08';
+file_date = '2024-11-06';
 channel = '/fading/';
-latency = '0ms';
+latency = '200ms';
 
 channel_param = append(channel,latency);
 file_path = append(file_date,channel_param);
-data_path = append(file_path,'/data.mat');
-param_path = append(file_path,'/Hyper_Param.txt');
+data_path = append(file_path,'/1/data.mat');
+param_path = append(file_path,'/1/Hyper_Param.txt');
 param = readcell(param_path);
 
 main_param = struct();
@@ -23,7 +23,7 @@ end
 
 data = load(data_path);
 
-window_size = 100;
+window_size = 500;
 lifting_time = data.stable_lifting_time;
 avg_lifting_time = movmean(lifting_time, window_size);
 box_pos = data.box_z_pos;
